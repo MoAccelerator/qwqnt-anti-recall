@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/qwqnt-community/types/main/plugin.schema.json",
+  "name": "qwqnt-anti-recall",
+  "version": "0.3.0",
+  "description": "防止 QQNT 撤回消息的 QwQNT 插件（基于 LiteLoaderQQNT-Anti-Recall 迁移）",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "oxlint --fix --tsconfig ./tsconfig.json --type-aware src/**/*.js,src/**/*.ts",
+    "build": "vite build --mode main && node scripts/copy-runtime-deps.mjs && node scripts/rebuild-leveldown.mjs && vite build --mode preload && vite build --mode renderer"
+  },
+  "author": "風間青祢",
+  "license": "MIT",
+  "dependencies": {
+    "level": "^7.0.1"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^2.0.0",
+    "@electron/rebuild": "^4.0.3",
+    "@qwqnt/types": "github:qwqnt-community/types",
+    "@types/node": "^25.3.0",
+    "electron": "^40.6.0",
+    "oxlint": "^1.49.0",
+    "oxlint-tsgolint": "^0.14.2",
+    "unplugin-oxlint": "^0.7.5",
+    "unplugin-zip-pack": "^1.0.3",
+    "vite": "^7.3.1",
+    "vite-plugin-cp": "^6.0.3"
+  },
+  "packageManager": "pnpm@10.28.0",
+  "qwqnt": {
+    "name": "防撤回（Anti-Recall）",
+    "inject": {
+      "main": "./main/index.cjs",
+      "preload": "./preload/index.cjs",
+      "renderer": "./renderer/index.js"
+    },
+    "dependencies": {
+      "qwqnt-ipc-interceptor": "^1.2.0",
+      "qwqnt-hako": "^1.0.0"
+    }
+  }
+}
