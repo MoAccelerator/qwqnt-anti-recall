@@ -1,5 +1,5 @@
 # qwqnt-Anti-Recall
-QwQNT 插件 - QQNT 简易防撤回 (由原LiteLoaderQQNT-Anti-Recall迁移)
+QwQNT 插件 - QQNT 简易防撤回 (由原[LiteLoaderQQNT-Anti-Recall](https://github.com/xh321/LiteLoaderQQNT-Anti-Recall)迁移)
 
 
 ## 功能特性
