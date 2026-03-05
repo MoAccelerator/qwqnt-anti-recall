@@ -37,6 +37,8 @@
    - `qwqnt-anti-recall`
 4. 重新运行QwQNT框架。
 
+**注意：qwqnt-hako请不要和qwqnt-renderer-events、qwqnt-plugin-settings这两个插件一起安装。**
+
 ### 设置页面说明
 
 在 QwQNT 插件管理 / 设置页面中找到 **「防撤回（Anti-Recall）」**，进入设置页后可以配置：
